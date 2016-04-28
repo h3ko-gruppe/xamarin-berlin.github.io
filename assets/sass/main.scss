@@ -319,19 +319,19 @@
 		cursor: pointer;
 
 		&:hover {
-			background-color: #f98780;
+			background-color: #46D0FF;
 		}
 
 		&.style1 {
-			background: #e97770 url('images/overlay.png');
+			background: #3192B3 url('images/overlay.png');
 			color: #fff;
 
 			&:hover {
-				background-color: #f98780;
+				background-color: #46D0FF;
 			}
 
 			&:active {
-				background-color: #d96760;
+				background-color: #38A6CC;
 			}
 		}
 
@@ -419,7 +419,7 @@
 
 	.feature-list {
 		h3 {
-			color: #e97770 !important;
+			color: #3192B3 !important;
 
 			&:before {
 				position: relative;
@@ -492,12 +492,12 @@
 		}
 
 		&.style1 {
-			background: #e97770 url('images/overlay.png');
+			background: #3192B3 url('images/overlay.png');
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 
 			.title {
-				background: #e97770 url('images/overlay.png');
+				background: #3192B3 url('images/overlay.png');
 				color: #fff;
 			}
 
@@ -667,7 +667,7 @@
 			text-align: center;
 
 			h3 {
-				color: #e97770;
+				color: #3192B3;
 			}
 		}
 	}

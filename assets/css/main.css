@@ -1023,26 +1023,26 @@ button,
   input[type="reset"]:hover,
   button:hover,
   .button:hover {
-    background-color: #f98780; }
+    background-color: #46D0FF; }
   input[type="button"].style1,
   input[type="submit"].style1,
   input[type="reset"].style1,
   button.style1,
   .button.style1 {
-    background: #e97770 url("images/overlay.png");
+    background: #3192B3 url("images/overlay.png");
     color: #fff; }
     input[type="button"].style1:hover,
     input[type="submit"].style1:hover,
     input[type="reset"].style1:hover,
     button.style1:hover,
     .button.style1:hover {
-      background-color: #f98780; }
+      background-color: #46D0FF; }
     input[type="button"].style1:active,
     input[type="submit"].style1:active,
     input[type="reset"].style1:active,
     button.style1:active,
     .button.style1:active {
-      background-color: #d96760; }
+      background-color: #38A6CC; }
   input[type="button"].style2,
   input[type="submit"].style2,
   input[type="reset"].style2,
@@ -1116,7 +1116,7 @@ ol.default {
 
 /* Feature List */
 .feature-list h3 {
-  color: #e97770 !important; }
+  color: #3192B3 !important; }
   .feature-list h3:before {
     position: relative;
     display: inline-block;
@@ -1174,11 +1174,11 @@ ol.default {
       height: 38px;
       background: url("images/shadow.png"); }
   .wrapper.style1 {
-    background: #e97770 url("images/overlay.png");
+    background: #3192B3 url("images/overlay.png");
     color: #eee;
     color: rgba(255, 255, 255, 0.75); }
     .wrapper.style1 .title {
-      background: #e97770 url("images/overlay.png");
+      background: #3192B3 url("images/overlay.png");
       color: #fff; }
     .wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
       color: #fff; }
@@ -1293,7 +1293,7 @@ ol.default {
 #highlights .highlight {
   text-align: center; }
   #highlights .highlight h3 {
-    color: #e97770; }
+    color: #3192B3; }
 
 /* Copyright */
 #copyright {
