@@ -71,7 +71,7 @@
 							Escape Velocity is a free responsive<br class="mobile-hide" />
 							site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
 						</p>
-						<p class="style3">Xamarin.Berlin ist ein Gemeinschaft unabhängiger Experten in und um Berlin. Durch unser weitreichendes Netzwerk haben wir die Möglichkeit Ihnen genau den 
+						<p class="style3">Xamarin.Berlin ist ein Gemeinschaft unabhängiger Experten in und um Berlin. Durch unser weitreichendes Netzwerk haben wir die Möglichkeit Ihnen genau den
 							Experten zur Seite zu stellen der am besten zu Ihnen passt. Egal ob Beratung oder Umsetzung, mit uns haben Sie einen Partner der sich genau Ihren Bedürfnissen anpasst.</p>
 						<ul class="actions">
 							<li><a href="#highlights" class="button style3 big scrolly">Zu den Experten</a></li>
@@ -151,10 +151,13 @@
 				<div class="wrapper style3">
 					<div class="title">Die Experten</div>
 					<div id="highlights" class="container">
+						<div>
+							<a href="javascript:slideit('mainImg')"><img src="images/pic10.jpg" alt=""></a>
+						</div>
 						<div class="row 150%">
 							<div class="4u 12u(mobile)">
 								<section class="highlight">
-									<a href="reicheltp/" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="reicheltp/" class="image featured"><img src="images/pic02.jpg" alt="" id="mainImg" /></a>
 									<h3><a href="reicheltp/">Paul Reichelt</a></h3>
 									<p>Im B2B Umfeld ist Paul anerkannter Experte für Cross-Platform Lösungen und skalierbare Businessanwendungen.</p>
 									<ul class="actions">
@@ -182,6 +185,34 @@
 									</ul>
 								</section>
 							</div>
+
+							<script type="text/javascript">
+								var image1 = new Image();
+								image1.src = "images/pic02.jpg";
+								var image2 = new Image();
+								image2.src = "images/pic03.jpg";
+								var image3 = new Image();
+								image3.src = "images/pic04.jpg";
+								var image4 = new Image();
+								image4.src = "images/pic05.jpg";
+
+								var images = new Array(image1.src, image2.src, image3.src, image4.src);
+
+								var step = 1;
+								function slideit(element)
+								{
+									// document.images.slide.src = eval("image"+step+".src");
+									if(step === images.length)
+										step = 0;
+
+									document.getElementById(element).src = images[step];
+
+									step++;
+
+									// setTimeout("slideit()",2500);
+								}
+								// slideit();
+							</script>
 						</div>
 					</div>
 				</div>
