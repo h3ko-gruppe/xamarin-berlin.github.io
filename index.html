@@ -352,6 +352,14 @@
 					var slideIntervalId = setInterval(function() {
 						slideit(true);
 					}, interval);
+
+					// Stop slide when left or right button was clicked
+					document.getElementById("slideBtnLeft").addEventListener("click", function() {
+						clearInterval(slideIntervalId);
+					});
+					document.getElementById("slideBtnRight").addEventListener("click", function() {
+						clearInterval(slideIntervalId);
+					});
 				}
 			</script>
 
