@@ -10,10 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
+		<div id="overlay">
+			<img src="images/process.gif" class="process_image"/>
+		</div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -66,13 +69,14 @@
 				<div id="intro-wrapper" class="wrapper style1">
 					<div class="title">Über uns</div>
 					<section id="intro" class="container">
-						<p class="style1">So in case you were wondering what this is all about ...</p>
+						<!--
+<p class="style1">So in case you were wondering what this is all about ...</p>
 						<p class="style2">
 							Escape Velocity is a free responsive<br class="mobile-hide" />
 							site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
 						</p>
-						<p class="style3">Xamarin.Berlin ist ein Gemeinschaft unabhängiger Experten in und um Berlin. Durch unser weitreichendes Netzwerk haben wir die Möglichkeit Ihnen genau den 
-							Experten zur Seite zu stellen der am besten zu Ihnen passt. Egal ob Beratung oder Umsetzung, mit uns haben Sie einen Partner der sich genau Ihren Bedürfnissen anpasst.</p>
+-->
+						<p class="style3">Xamarin.Berlin ist ein Netzwerk unabhängiger Experten in und um Berlin. Dank unserer Erfahrungen und dem Know-how unserer Kooperationspartner, bieten wir die Möglichkeit, Ihnen genau den Experten zur Seite zu stellen, der am besten zu Ihrem Projektvorhaben passt. Die wichtigsten Attribute, die unsere Arbeitsweise beschreiben, sind Verlässlichkeit, Verbindlichkeit und Anpassungsfähigkeit - ob in der Beratung oder in der Umsetzung komplexer Projekte.</p>
 						<ul class="actions">
 							<li><a href="#highlights" class="button style3 big scrolly">Zu den Experten</a></li>
 						</ul>
@@ -85,42 +89,42 @@
 					<div id="main" class="container">
 
 						<!-- Image -->
-							<a href="#" class="image featured">
-								<img src="images/pic01.jpg" alt="" />
+							<a href="#" class="image centered">
+								<img src="images/xamagon.png" alt="" />
 							</a>
 
 						<!-- Features -->
 							<section id="features">
 								<header class="style1">
-									<h2>Xamarin ist das optimale Tool für Ihre mobilen Unternehmenslösungen</h2>
-									<p>Erfahren Sie mehr über Xamarin von einem unserer <a href="#highlights" class="scrolly">Experten</a>. Oder besuchen sie doch einfach einen unserer Workshops.</p>
+									<h2>Xamarin ist das geeignetste Framework für Ihre plattformunabhängigen, nativen und mobilen Unternehmenslösungen.</h2>
+									<p>Erfahren Sie mehr über Xamarin und den damit verbundenen Möglichkeiten von einem unserer <a href="#highlights" class="scrolly">Experten</a>, oder besuchen Sie einfach einen unserer unterschiedlichen Workshops.</p>
 								</header>
 								<div class="feature-list">
 									<div class="row">
 										<div class="6u 12u(mobile)">
 											<section>
-												<h3 class="icon fa-mobile">Cross Platform</h3>
-												<p>Erstellen Sie Apps für iOS, Android und Windows mit nur einer C# Code Basis und verwenden sie über 96% Ihres Codes auf allen Platformen.</p>
+												<h3 class="icon fa-share-alt">Cross Platform</h3>
+												<p>Wir erstellen Ihre Apps für iOS, Android und Windows mit nur einer C# Code Basis und können damit über 96% des Codes auf allen Plattformen verwenden.</p>
 											</section>
 										</div>
 										<div class="6u 12u(mobile)">
 											<section>
-												<h3 class="icon fa-refresh">100% Nativ</h3>
-												<p>Im Gegensatz zu Cordova und PhoneGap erstellen Sie mit Xamarin 100% native Apps. Ohne Performanceverlust und native UI auf allen Platformen.</p>
+												<h3 class="icon fa-cog">100% Nativ</h3>
+												<p>Im Gegensatz zu Cordova oder PhoneGap erstellen wir mit Xamarin 100% native Apps. Ohne Performanceverlust und native UI auf allen Plattformen.</p>
 											</section>
 										</div>
 									</div>
 									<div class="row">
 										<div class="6u 12u(mobile)">
 											<section>
-												<h3 class="icon fa-picture-o">Mobile First</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+												<h3 class="icon fa-mobile">Mobile First</h3>
+												<p>Damit Ihre mobile Anwendung nicht wie ein Anhängsel der Hauptanwendung wirkt, setzen wir die Prioritäten im Mobile First Entwicklungsansatz neu. Lassen Sie sich von uns beraten.</p>
 											</section>
 										</div>
 										<div class="6u 12u(mobile)">
 											<section>
-												<h3 class="icon fa-graduation-cap">Workshops</h3>
-												<p>Besuchen Sie einen unserer Workshops um mehr über Xamarin zu erfahren. Gerne kommen wir auch zu Ihnen in die Firma und Sie bekommen einen auf Ihre Bedürfnisse zugeschnittenen Kurs.</p>
+												<h3 class="icon fa-users">Workshops</h3>
+												<p>Besuchen Sie einen unserer Workshops, um mehr über Xamarin zu erfahren. Gerne können wir einen Besuch in Ihrer Firma realisieren und damit einen, individuell auf Ihre Bedürfnisse zugeschnitten, Workshop durchführen.</p>
 											</section>
 										</div>
 									</div>
@@ -128,21 +132,12 @@
 										<div class="6u 12u(mobile)">
 											<section>
 												<h3 class="icon fa-wrench">Umsetzung</h3>
-												<p>Bei Resourcen Problemen unterstützen wir sie auch jederzeit vor Ort bei der Implementierung. - Sie haben keine Entwickler? Wir und unsere Partner bringen Ihre Idee zum Erfolg.</p>
+												<p>Bei Ressourcen-Problemen unterstützen wir Sie jederzeit vor Ort bei der Implementierung. Fehlt Ihnen ein passender Entwickler, so können wir Ihre Idee zum Erfolg führen.</p>
 											</section>
-										</div>
-										<div class="6u 12u(mobile)">
-											<section>
-												<h3 class="icon fa-check">Dolore laoreet aliquam mattis</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-											</section>
-										</div>
+										</div>										
 									</div>
 								</div>
-								<ul class="actions actions-centered">
-									<li><a href="#footer" class="button style1 big scrolly">Los gehts</a></li>
-									<li><a href="#highlights" class="button style2 big scrolly">Mehr Erfahren</a></li>
-								</ul>
+								
 							</section>
 					</div>
 				</div>
@@ -164,9 +159,9 @@
 							</div>
 							<div class="4u 12u(mobile)">
 								<section class="highlight">
-									<a href="rherlt/" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="rherlt/" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 									<h3><a href="rherlt/">Rico Herlt</a></h3>
-									<p>Als Geschäftsführer der <a href="http://h3ko.de">h3ko</a> unterstütz Rico tagtäglich Unternehmen bei dem Weg in das mobile Zeitalter.</p>
+									<p>Als Consulter begleitet <a href="http://ricoherlt.com/" target="_blank" title="ricoherlt.com">Rico</a> täglich Unternehmen auf den Weg ins digitale mobile Zeitalter.</p>
 									<ul class="actions">
 										<li><a href="rherlt/" class="button style1">Mehr erfahren</a></li>
 									</ul>
@@ -174,9 +169,9 @@
 							</div>
 							<div class="4u 12u(mobile)">
 								<section class="highlight">
-									<a href="aromoth/" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+									<a href="aromoth/" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 									<h3><a href="aromoth/">Andree Romoth</a></h3>
-									<p>Dank seiner mehrjährigen Erfahrung ist Andree Ihr Experte für native Oberflächen auf iOS und Android.</p>
+									<p>Bei der Umsetzung von nativen Oberflächen auf iOS, Android und Windows ist Andree Ihr Experte.</p>
 									<ul class="actions">
 										<li><a href="aromoth/" class="button style1">Mehr erfahren</a></li>
 									</ul>
@@ -199,11 +194,14 @@
 						</header>
 						<hr />
 						<div class="row 150%">
-							<div class="6u 12u(mobile)">
+							<div class="1u 12u(mobile) "></div>
+							<div class="10u 12u(mobile) ">
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="https://formspree.io/reicheltp@outlook.com">
+										<h2 class="success_message response_message">Vielen Dank für Ihre Nachricht!</h2>
+										<h2 class="error_message response_message">Beim senden der Nachricht ist ein Fehler unterlaufen.</h2>
+										<form id="contactform" method="post">
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
@@ -220,71 +218,25 @@
 											<div class="row">
 												<div class="12u">
 													<ul class="actions">
-														<li><input type="submit" class="style1" value="Senden" /></li>
-														<li><input type="reset" class="style2" value="Zurücksetzen" /></li>
+														<li><input id="form_submit" type="submit" class="style1" value="Senden" /></li>
 													</ul>
 												</div>
 											</div>
-											<input type="hidden" name="_subject" value="Kontaktanfrage Xamarin.Berlin" />
+											<input type="hidden" id="contact-subject" name="_subject" value="Kontaktanfrage%20Xamarin.Berlin" />
 											<input type="hidden" name="_next" value="#thankyou" />
 											<input type="text" name="_format" value="plain" style="display:none" />
 										</form>
 									</section>
 
 							</div>
-							<div class="6u 12u(mobile)">
-
-								<!-- Contact -->
-									<section class="feature-list small">
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<section>
-													<h3 class="icon fa-home">Mailing Address</h3>
-													<p>
-														TBD
-													</p>
-												</section>
-											</div>
-											<div class="6u 12u(mobile)">
-												<section>
-													<h3 class="icon fa-comment">Social</h3>
-													<p>
-														<a href="#">@reicheltp</a><br />
-														<a href="#">@rherlt</a><br />
-														<!--<a href="#">linkedin.com/untitled</a><br />-->
-														<!--<a href="#">facebook.com/untitled</a>-->
-													</p>
-												</section>
-											</div>
-										</div>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<section>
-													<h3 class="icon fa-envelope">Email</h3>
-													<p>
-														TBD
-														<!-- <a href="#">info@xamarin.berlin</a> -->
-													</p>
-												</section>
-											</div>
-											<div class="6u 12u(mobile)">
-												<section>
-													<h3 class="icon fa-phone">Telefon</h3>
-													<p>
-														TBD
-													</p>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
+							
 						</div>
 						<hr />
 					</div>
 					<div id="copyright">
 						<ul>
-							<li>&copy; Paul Reichelt</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Xamarin.belin</li>
+							<li><a href="imprint/">Impressum</a></li>
 						</ul>
 					</div>
 				</div>
