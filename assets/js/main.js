@@ -103,5 +103,88 @@
 						.css('transition', 'none');
 
 	});
+	
+	/* CONTACT FORM VALIDATION */
+	$("#contactform #form_submit").click(function( event ) {
+	  	event.preventDefault();
+	});
+	$("#contactform #form_submit").click(function(){
+		var name = checkName();
+		var mail = checkMail();
+		var message = checkMessage();
+		if (name == true && mail == true && message == true){
+			$("#contactform").submit();			
+		} else {
+			var errorMessage = "Es gibt Fehler beim Ausfüllen des Kontaktformulars:\n";
+			if (name != true){
+				errorMessage += name + "\n";
+			}
+			if (mail != true){
+				errorMessage += mail + "\n";
+			}
+			if (message != true){
+				errorMessage += message + "\n";
+			}
+			alert(errorMessage);			
+		}
+	})
+	
+	function checkName(){
+		if ($("#contact-name").val() == 0){
+			return 'Bitte füllen Sie das Feld "Name" aus.';
+		} else {
+			return true;
+		}
+	}
+	function checkMail(){
+		if ($("#contact-email").val() == 0){
+			return 'Bitte füllen Sie das Feld "Email" aus.';
+		} else if( !isValidEmailAddress( $("#contact-email").val() ) ) { 
+			return 'Bitte tragen Sie eine gültige Email-Adresse in das Feld "Email" ein.';
+		} else {
+			return true;
+		}
+	}
+	function checkMessage(){
+		if ($("#contact-message").val() == 0){
+			return 'Bitte füllen Sie das Feld "Nachricht" aus.';
+		} else {
+			return true;
+		}
+	}
+	function isValidEmailAddress(emailAddress) {
+	    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+	    return pattern.test(emailAddress);
+	}
+	
+	/* SEND CONTACT FORM */
+	$("#contactform").submit(function(){
+		var subject = $("#contact-subject").val();		
+		var url = "http://mailbot.dev.h3ko.de/api/Smtp?subject=" + subject + "&isHtmlBody=false&api-token=357f3abd4343420180513b5dddb737aa";
+		var dataType = "text/plain";
+		var contactName = $("#contact-name").val();
+		var contactMail = $("#contact-email").val();
+		var contactMessage = $("#contact-message").val();
+		var data = "Name: " + contactName + "\nE-Mail: " + contactMail + "\nNachricht:\n" + contactMessage;
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: data,
+			success: function(){
+				$(".success_message").show();
+				$("#overlay").fadeOut();
+			},
+			error: function(){
+				$(".error_message").show();
+				$("#overlay").fadeOut();
+			},
+			contentType: "text/plain"
+		});
+		$("#contact-name").val("");
+		$("#contact-email").val("");
+		$("#contact-message").val("");
+		$("#overlay").fadeIn();
+		return false;
+	});
 
 })(jQuery);
