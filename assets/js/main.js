@@ -160,7 +160,7 @@
 	/* SEND CONTACT FORM */
 	$("#contactform").submit(function(){
 		var subject = $("#contact-subject").val();		
-		var url = "http://mailbot.dev.h3ko.de/api/Smtp?subject=" + subject + "&isHtmlBody=false&api-token=357f3abd4343420180513b5dddb737aa";
+		var url = "https://mailbot.h3ko.de/api/Smtp?subject=" + subject + "&isHtmlBody=false&api-token=357f3abd4343420180513b5dddb737aa";
 		var dataType = "text/plain";
 		var contactName = $("#contact-name").val();
 		var contactMail = $("#contact-email").val();
